@@ -1,0 +1,16 @@
+2026-09-28 15:47:46,551 INFO Iniciando processamento
+2026-09-28 15:47:46,551 ERROR Falha no processamento
+Traceback (most recent call last):
+  File "C:\Users\Asusg\Documents\2026\python\fundamentos-python\dataprocessor\dataprocessor\main.py", line 63, in main
+    resultado = executar_processamento(fonte)
+  File "C:\Users\Asusg\Documents\2026\python\fundamentos-python\dataprocessor\dataprocessor\services\processamento.py", line 11, in executar_processamento
+    config = fonte.carregar_config()
+  File "C:\Users\Asusg\Documents\2026\python\fundamentos-python\dataprocessor\dataprocessor\infra\fontes.py", line 32, in carregar_config
+    return carregar_config(self.caminho_config)
+  File "C:\Users\Asusg\Documents\2026\python\fundamentos-python\dataprocessor\dataprocessor\infra\arquivos.py", line 55, in carregar_config
+    with Path(caminho).open(encoding="utf-8") as arquivo:
+         ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asusg\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\conifg.csv'
